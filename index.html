@@ -7,22 +7,6 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        #floatingContact {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #f56a6a;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 30px;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            z-index: 9999;
-            font-weight: bold;
-        }
-        .skills {
-            margin-top: 1em;
-        }
         .skills li {
             margin-bottom: 6px;
         }
@@ -30,7 +14,6 @@
 </head>
 <body class="is-preload">
 
-    <!-- Wrapper -->
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -43,8 +26,8 @@
             <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
         </nav>
 
-        <!-- Main -->
         <div id="main">
+
             <!-- Home -->
             <article id="home" class="panel intro">
                 <header>
@@ -72,6 +55,7 @@
                     <li>Fusion 360: ★★★★★</li>
                     <li>SolidWorks: ★★★★☆</li>
                     <li>Python: ★★★☆☆</li>
+                    <li>MATLAB: ★★★☆☆</li>
                     <li>EES: ★★★☆☆</li>
                     <li>Microsoft Office: ★★★★★</li>
                 </ul>
@@ -83,83 +67,24 @@
                 <header>
                     <h2>Education</h2>
                 </header>
-                <ul>
-                    <li><strong>High School:</strong> Özel Türk Koleji (2018 – 2021)</li>
-                    <li><strong>University:</strong> Yaşar University, Mechanical Engineering Department (2021 – 2025)</li>
-                </ul>
-            </article>
-
-            <!-- Experience -->
-            <article id="experience" class="panel">
-                <header>
-                    <h2>Experience</h2>
-                </header>
-                <div class="row">
-                    <div class="col-6 col-12-medium">
-                        <h3>Maxion Jantaş – Production Intern (Aug 2024 – Sep 2024)</h3>
-                        <p>During my internship at Maxion Jantaş, I actively took part in the wheel manufacturing processes within the production department. I learned about lean manufacturing principles, quality control systems, and participated in hands-on operations using CNC machines and SAP-based inventory tracking. This experience deepened my understanding of mass production environments and industrial workflows.</p>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <img src="images/maxion-logo.png" alt="Maxion Jantaş Logo" style="max-width:100%; border-radius: 10px;">
-                    </div>
+                <div>
+                    <h3>Bachelor of Science in Mechanical Engineering</h3>
+                    <i>Yaşar University</i>
+                    <ul>
+                        <li>Relevant Coursework: Thermodynamics, Fluid Mechanics, Machine Design, Heat Transfer</li>
+                        <li>Explored opportunities to work with simulation tools, collaborative engineering projects, and sustainable design.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>High School Diploma</h3>
+                    <i>Özel Türk Koleji</i>
+                    <ul>
+                        <li>Focused on Science and Mathematics.</li>
+                        <li>Developed a strong foundation in problem solving, logic, and analytical thinking, preparing me for engineering education.</li>
+                    </ul>
                 </div>
             </article>
 
-            <!-- Projects -->
-            <article id="projects" class="panel">
-                <header>
-                    <h2>Projects</h2>
-                </header>
-
-                <div class="row">
-                    <div class="col-6 col-12-medium">
-                        <h3>Multigeneration Geothermal Power Plant</h3>
-                        <p>This senior design project focuses on developing a multigeneration system that uses geothermal energy to simultaneously produce electricity, hydrogen, and freshwater. The system integrates Rankine Cycle, PEM electrolyzer, and multistage desalination to demonstrate sustainable and efficient energy generation.</p>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <img src="images/project1_geothermal.png" alt="Geothermal Project Image" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-6 col-12-medium">
-                        <h3>ANAFARTA KTR 2025 – Autonomous Combat UAV</h3>
-                        <p>Developed for the TUBITAK 2025 competition, ANAFARTA is a fully autonomous UAV optimized for surveillance and combat missions. It includes real-time image processing, target tracking, aerodynamic optimization, and energy-efficient operation strategies.</p>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <img src="images/project2_anafarta.png" alt="UAV Project Image" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-6 col-12-medium">
-                        <h3>Renewable Energy + Hydrogen Storage</h3>
-                        <p>This term project proposes a hybrid renewable energy system integrating solar and wind with hydrogen storage. The system ensures stable energy supply for university campuses and evaluates technical and economic feasibility using demand models and ROI/LCOE analysis.</p>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <img src="images/project3_h2storage.png" alt="Hydrogen Storage Project Image" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-6 col-12-medium">
-                        <h3>Autonomous Rudder Steering Systems for Boats <span style="color:gray;">(Ongoing)</span></h3>
-                        <p>This project focuses on developing an autonomous rudder control system for boats to improve stability and route precision. It is currently under development and will include embedded feedback mechanisms and control algorithms.</p>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <img src="images/project4_rudder.png" alt="Rudder System Image" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
-            </article>
-
-            <!-- Contact -->
-            <article id="contact" class="panel">
-                <header>
-                    <h2>Contact Me</h2>
-                </header>
-                <p>If you would like to get in touch for collaboration, internship opportunities, or just to say hi, feel free to email me directly.</p>
-                <p><strong>Email:</strong> cangirgin@gmail.com</p>
-            </article>
         </div>
 
         <!-- Footer -->
@@ -172,7 +97,6 @@
 
     </div>
 
-    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
