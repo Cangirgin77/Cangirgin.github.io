@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        #floatingContact {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f56a6a;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 9999;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -16,6 +31,7 @@
         <nav id="nav">
             <a href="#home" class="icon solid fa-home"><span>Home</span></a>
             <a href="#about" class="icon solid fa-user"><span>About Me</span></a>
+            <a href="#education" class="icon solid fa-graduation-cap"><span>Education</span></a>
             <a href="#projects" class="icon solid fa-folder-open"><span>Projects</span></a>
             <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
         </nav>
@@ -23,11 +39,12 @@
         <!-- Main -->
         <div id="main">
 
-            <!-- Home Section -->
+            <!-- Home -->
             <article id="home" class="panel intro">
                 <header>
                     <h1>Can Girgin</h1>
-                    <p>Mechanical Engineering Student</p>
+                    <p>Mechanical Engineering Student<br>
+                    <strong>Date of Birth:</strong> 24/03/2003</p>
                 </header>
                 <a href="#about" class="jumplink pic">
                     <span class="arrow icon solid fa-chevron-right"><span>About Me</span></span>
@@ -35,7 +52,7 @@
                 </a>
             </article>
 
-            <!-- About Me Section -->
+            <!-- About Me -->
             <article id="about" class="panel">
                 <header>
                     <h2>About Me</h2>
@@ -49,7 +66,18 @@
                 <img src="images/about-final.png" alt="About Image" style="max-width:100%; border-radius: 10px;">
             </article>
 
-            <!-- Projects Section -->
+            <!-- Education -->
+            <article id="education" class="panel">
+                <header>
+                    <h2>Education</h2>
+                </header>
+                <ul>
+                    <li><strong>High School:</strong> Özel Türk Koleji (2018 – 2021)</li>
+                    <li><strong>University:</strong> Yaşar University, Mechanical Engineering Department (2021 – 2025)</li>
+                </ul>
+            </article>
+
+            <!-- Projects -->
             <article id="projects" class="panel">
                 <header>
                     <h2>Projects</h2>
@@ -69,7 +97,7 @@
                 <!-- Project 2 -->
                 <div class="row">
                     <div class="col-6 col-12-medium">
-                        <h3>ANAFARTA İHA – Autonomous Combat UAV</h3>
+                        <h3>ANAFARTA KTR 2025 – Autonomous Combat UAV</h3>
                         <p>Developed for the TUBITAK 2025 competition, ANAFARTA is a fully autonomous UAV optimized for surveillance and combat missions. It includes real-time image processing, target tracking, aerodynamic optimization, and energy-efficient operation strategies.</p>
                     </div>
                     <div class="col-6 col-12-medium">
@@ -80,39 +108,39 @@
                 <!-- Project 3 -->
                 <div class="row">
                     <div class="col-6 col-12-medium">
-                        <h3>Renewable Energy + Hydrogen Storage for Campuses</h3>
-                        <p>This  project proposes a hybrid renewable energy system integrating solar and wind with hydrogen storage. The system ensures stable energy supply for university campuses and evaluates technical and economic feasibility using demand models and ROI/LCOE analysis.</p>
+                        <h3>Renewable Energy + Hydrogen Storage</h3>
+                        <p>This term project proposes a hybrid renewable energy system integrating solar and wind with hydrogen storage. The system ensures stable energy supply for university campuses and evaluates technical and economic feasibility using demand models and ROI/LCOE analysis.</p>
                     </div>
                     <div class="col-6 col-12-medium">
                         <img src="images/project3_h2storage.png" alt="Hydrogen Storage Project Image" style="max-width:100%; border-radius: 10px;">
                     </div>
                 </div>
+
+                <!-- Project 4 -->
+                <div class="row">
+                    <div class="col-6 col-12-medium">
+                        <h3>Autonomous Rudder Steering Systems for Boats <span style="color:gray;">(Ongoing)</span></h3>
+                        <p>This project focuses on developing an autonomous rudder control system for boats to improve stability and route precision. It is currently under development and will include embedded feedback mechanisms and control algorithms.</p>
+                    </div>
+                    <div class="col-6 col-12-medium">
+                        <img src="images/project4_rudder.png" alt="Rudder System Image" style="max-width:100%; border-radius: 10px;">
+                    </div>
+                </div>
             </article>
 
-            <!-- Contact Section -->
+            <!-- Contact -->
             <article id="contact" class="panel">
                 <header>
-                    <h2>Contact Me</h2>
+                    <h2>Mesaj Gönder</h2>
                 </header>
-                <form action="#" method="post">
-                    <div class="row">
-                        <div class="col-6 col-12-medium">
-                            <input type="text" name="name" placeholder="Name" />
-                        </div>
-                        <div class="col-6 col-12-medium">
-                            <input type="text" name="email" placeholder="Email" />
-                        </div>
-                        <div class="col-12">
-                            <input type="text" name="subject" placeholder="Subject" />
-                        </div>
-                        <div class="col-12">
-                            <textarea name="message" placeholder="Message" rows="6"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <input type="submit" value="Send Message" />
-                        </div>
-                    </div>
+                <form id="contact-form">
+                    <input type="text" name="user_name" placeholder="Adınız" required />
+                    <input type="email" name="user_email" placeholder="E-posta Adresiniz" required />
+                    <input type="text" name="subject" placeholder="Konu" required />
+                    <textarea name="message" placeholder="Mesajınız" rows="6" required></textarea>
+                    <button type="submit">Gönder</button>
                 </form>
+                <p id="success-message" style="color: green; display: none;">Mesajınız başarıyla gönderildi!</p>
             </article>
 
         </div>
@@ -126,16 +154,26 @@
         </div>
 
     </div>
-<!-- Project 4 -->
-<div class="row">
-    <div class="col-6 col-12-medium">
-        <h3>Autonomous Rudder Steering Systems for Boats <span style="color: gray;">(Ongoing)</span></h3>
-        <p>This ongoing project focuses on developing an autonomous rudder steering control system for small-scale boats. It aims to improve navigation precision and stability through embedded control algorithms and sensor integration. The system is still under development and will include real-time feedback and course correction capabilities.</p>
-    </div>
-    <div class="col-6 col-12-medium">
-        <img src="images/project4_rudder.png" alt="Rudder Steering System Image" style="max-width:100%; border-radius: 10px;">
-    </div>
-</div>
+
+    <!-- EmailJS Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("YOUR_PUBLIC_KEY"); // BURAYA kendi EmailJS public key
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+                .then(function() {
+                    document.getElementById("success-message").style.display = "block";
+                    document.getElementById("contact-form").reset();
+                }, function(error) {
+                    alert("Mesaj gönderilemedi: " + JSON.stringify(error));
+                });
+        });
+    </script>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
