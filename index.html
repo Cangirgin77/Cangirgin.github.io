@@ -18,6 +18,31 @@
         .col-6 {
             flex: 1 1 45%;
         }
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+            margin-top: 2em;
+        }
+        .contact-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1 1 200px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .contact-item i {
+            font-size: 32px;
+            color: #4a90e2;
+        }
+        .contact-item h4 {
+            margin: 10px 0 5px;
+        }
+        .contact-item p {
+            margin: 0;
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -155,11 +180,32 @@
             <!-- Contact -->
             <article id="contact" class="panel">
                 <header>
-                    <h2>Contact Me</h2>
+                    <h2>Contact</h2>
                 </header>
-                <p>If you would like to get in touch for collaboration, internship opportunities, or just to say hi, feel free to email me directly.</p>
-                <p><strong>Email:</strong> cangirgin@gmail.com</p>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <i class="icon solid fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>cangirgin@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="icon solid fa-phone"></i>
+                        <h4>Phone</h4>
+                        <p>+90 537 861 0414</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="icon solid fa-map-marker-alt"></i>
+                        <h4>Location</h4>
+                        <p>Balçova, İzmir</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="icon brands fa-linkedin"></i>
+                        <h4>LinkedIn</h4>
+                        <p><a href="https://www.linkedin.com/in/can-girgin-01a2b61b1/" target="_blank">can-girgin-01a2b61b1</a></p>
+                    </div>
+                </div>
             </article>
+
         </div>
 
         <!-- Footer -->
