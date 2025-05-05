@@ -43,13 +43,20 @@
         .contact-item p {
             margin: 0;
         }
+        .cv-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body class="is-preload">
-
     <div id="wrapper">
-
-        <!-- Navigation -->
         <nav id="nav">
             <a href="#home" class="icon solid fa-home"><span>Home</span></a>
             <a href="#about" class="icon solid fa-user"><span>About Me</span></a>
@@ -60,13 +67,12 @@
         </nav>
 
         <div id="main">
-
-            <!-- Home -->
             <article id="home" class="panel intro">
                 <header>
                     <h1>Can Girgin</h1>
                     <p>Mechanical Engineering Student<br>
                     <strong>Date of Birth:</strong> 24/03/2003</p>
+                    <a href="assets/CV_CanGirgin.pdf" class="cv-button" download>CV (Curriculum Vitae) İncele</a>
                 </header>
                 <a href="#about" class="jumplink pic">
                     <span class="arrow icon solid fa-chevron-right"><span>About Me</span></span>
@@ -74,14 +80,9 @@
                 </a>
             </article>
 
-            <!-- About Me -->
             <article id="about" class="panel">
-                <header>
-                    <h2>About Me</h2>
-                </header>
-                <p>
-                    I am a 4th-year Mechanical Engineering student at Yaşar University. I am passionate about design and innovation, and I constantly strive to improve myself. I closely follow technological developments and focus on creating sustainable and efficient solutions. I am particularly interested in the defense industry and the automotive sector.
-                </p>
+                <header><h2>About Me</h2></header>
+                <p>I am a 4th-year Mechanical Engineering student at Yaşar University. I am passionate about design and innovation, and I constantly strive to improve myself. I closely follow technological developments and focus on creating sustainable and efficient solutions. I am particularly interested in the defense industry and the automotive sector.</p>
                 <h3>Skills</h3>
                 <ul class="skills">
                     <li>AutoCAD: ★★★★★</li>
@@ -95,11 +96,8 @@
                 <img src="images/about-final.png" alt="About Image" style="max-width:100%; border-radius: 10px;">
             </article>
 
-            <!-- Education -->
             <article id="education" class="panel">
-                <header>
-                    <h2>Education</h2>
-                </header>
+                <header><h2>Education</h2></header>
                 <div>
                     <h3>Bachelor of Science in Mechanical Engineering (2021 – 2025)</h3>
                     <i>Yaşar University – İzmir</i>
@@ -118,11 +116,8 @@
                 </div>
             </article>
 
-            <!-- Experience -->
             <article id="experience" class="panel">
-                <header>
-                    <h2>Experience</h2>
-                </header>
+                <header><h2>Experience</h2></header>
                 <div class="row">
                     <div class="col-6">
                         <h3>Maxion Jantaş – Production Intern (Aug 2024 – Sep 2024)</h3>
@@ -134,54 +129,48 @@
                 </div>
             </article>
 
-            <!-- Projects -->
             <article id="projects" class="panel">
-                <header>
-                    <h2>Projects</h2>
-                </header>
+                <header><h2>Projects</h2></header>
                 <div class="row">
                     <div class="col-6">
                         <h3>Multigeneration Geothermal Power Plant</h3>
-                        <p>This senior design project focuses on developing a multigeneration system that uses geothermal energy to simultaneously produce electricity, hydrogen, and freshwater. The system integrates Rankine Cycle, PEM electrolyzer, and multistage desalination to demonstrate sustainable and efficient energy generation.</p>
+                        <p>Multigeneration system that uses geothermal energy to produce electricity, hydrogen, and freshwater. Uses Rankine Cycle, PEM electrolyzer, and multistage desalination.</p>
                     </div>
                     <div class="col-6">
-                        <img src="images/project1_geothermal.png" alt="Geothermal Project Image" style="max-width:100%; border-radius: 10px;">
+                        <img src="images/project1_geothermal.png" alt="Geothermal Project" style="max-width:100%; border-radius: 10px;">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <h3>ANAFARTA KTR 2025 – Autonomous Combat UAV</h3>
-                        <p>Developed for the TUBITAK 2025 competition, ANAFARTA is a fully autonomous UAV optimized for surveillance and combat missions. It includes real-time image processing, target tracking, aerodynamic optimization, and energy-efficient operation strategies.</p>
+                        <p>Autonomous UAV developed for TUBITAK 2025 competition with real-time image processing, target tracking, and aerodynamic optimization.</p>
                     </div>
                     <div class="col-6">
-                        <img src="images/project2_anafarta.png" alt="UAV Project Image" style="max-width:100%; border-radius: 10px;">
+                        <img src="images/project2_anafarta.png" alt="UAV Project" style="max-width:100%; border-radius: 10px;">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <h3>Renewable Energy + Hydrogen Storage</h3>
-                        <p>This term project proposes a hybrid renewable energy system integrating solar and wind with hydrogen storage. The system ensures stable energy supply for university campuses and evaluates technical and economic feasibility using demand models and ROI/LCOE analysis.</p>
+                        <p>Hybrid renewable energy system integrating solar and wind with hydrogen storage. Includes ROI/LCOE analysis for campus-level energy management.</p>
                     </div>
                     <div class="col-6">
-                        <img src="images/project3_h2storage.png" alt="Hydrogen Storage Project Image" style="max-width:100%; border-radius: 10px;">
+                        <img src="images/project3_h2storage.png" alt="Hydrogen Storage Project" style="max-width:100%; border-radius: 10px;">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <h3>Autonomous Rudder Steering Systems for Boats <span style="color:gray;">(Ongoing)</span></h3>
-                        <p>This project focuses on developing an autonomous rudder control system for boats to improve stability and route precision. It is currently under development and will include embedded feedback mechanisms and control algorithms.</p>
+                        <p>System to improve marine navigation and steering using sensors and feedback loops. Includes prototype development and control design.</p>
                     </div>
                     <div class="col-6">
-                        <img src="images/project4_rudder.png" alt="Rudder System Image" style="max-width:100%; border-radius: 10px;">
+                        <img src="images/project4_rudder.png" alt="Rudder Project" style="max-width:100%; border-radius: 10px;">
                     </div>
                 </div>
             </article>
 
-            <!-- Contact -->
             <article id="contact" class="panel">
-                <header>
-                    <h2>Contact</h2>
-                </header>
+                <header><h2>Contact</h2></header>
                 <div class="contact-grid">
                     <div class="contact-item">
                         <i class="icon solid fa-envelope"></i>
@@ -205,17 +194,14 @@
                     </div>
                 </div>
             </article>
-
         </div>
 
-        <!-- Footer -->
         <div id="footer">
             <ul class="copyright">
                 <li>&copy; Can Girgin</li>
                 <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
         </div>
-
     </div>
 
     <script src="assets/js/jquery.min.js"></script>
