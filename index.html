@@ -20,6 +20,45 @@
             z-index: 9999;
             font-weight: bold;
         }
+
+        .contact-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            z-index: 10000;
+            max-width: 90%;
+            width: 400px;
+        }
+
+        .contact-modal h2 {
+            margin-top: 0;
+        }
+
+        .contact-modal button.close {
+            background: #ccc;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            float: right;
+            cursor: pointer;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 9998;
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -33,12 +72,10 @@
             <a href="#about" class="icon solid fa-user"><span>About Me</span></a>
             <a href="#education" class="icon solid fa-graduation-cap"><span>Education</span></a>
             <a href="#projects" class="icon solid fa-folder-open"><span>Projects</span></a>
-            <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
         </nav>
 
         <!-- Main -->
         <div id="main">
-
             <!-- Home -->
             <article id="home" class="panel intro">
                 <header>
@@ -83,7 +120,6 @@
                     <h2>Projects</h2>
                 </header>
 
-                <!-- Project 1 -->
                 <div class="row">
                     <div class="col-6 col-12-medium">
                         <h3>Multigeneration Geothermal Power Plant</h3>
@@ -94,7 +130,6 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
                 <div class="row">
                     <div class="col-6 col-12-medium">
                         <h3>ANAFARTA KTR 2025 – Autonomous Combat UAV</h3>
@@ -105,7 +140,6 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
                 <div class="row">
                     <div class="col-6 col-12-medium">
                         <h3>Renewable Energy + Hydrogen Storage</h3>
@@ -116,7 +150,6 @@
                     </div>
                 </div>
 
-                <!-- Project 4 -->
                 <div class="row">
                     <div class="col-6 col-12-medium">
                         <h3>Autonomous Rudder Steering Systems for Boats <span style="color:gray;">(Ongoing)</span></h3>
@@ -126,21 +159,6 @@
                         <img src="images/project4_rudder.png" alt="Rudder System Image" style="max-width:100%; border-radius: 10px;">
                     </div>
                 </div>
-            </article>
-
-            <!-- Contact -->
-            <article id="contact" class="panel">
-                <header>
-                    <h2>Mesaj Gönder</h2>
-                </header>
-                <form id="contact-form">
-                    <input type="text" name="user_name" placeholder="Adınız" required />
-                    <input type="email" name="user_email" placeholder="E-posta Adresiniz" required />
-                    <input type="text" name="subject" placeholder="Konu" required />
-                    <textarea name="message" placeholder="Mesajınız" rows="6" required></textarea>
-                    <button type="submit">Gönder</button>
-                </form>
-                <p id="success-message" style="color: green; display: none;">Mesajınız başarıyla gönderildi!</p>
             </article>
 
         </div>
@@ -155,25 +173,20 @@
 
     </div>
 
-    <!-- EmailJS Integration -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function(){
-            emailjs.init("YOUR_PUBLIC_KEY"); // BURAYA kendi EmailJS public key
-        })();
+    <!-- Floating Contact Button -->
+    <div id="floatingContact" onclick="document.querySelector('.overlay').style.display='block';document.querySelector('.contact-modal').style.display='block';">
+        Contact
+    </div>
 
-        document.getElementById("contact-form").addEventListener("submit", function(e) {
-            e.preventDefault();
-
-            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-                .then(function() {
-                    document.getElementById("success-message").style.display = "block";
-                    document.getElementById("contact-form").reset();
-                }, function(error) {
-                    alert("Mesaj gönderilemedi: " + JSON.stringify(error));
-                });
-        });
-    </script>
+    <!-- Overlay & Modal -->
+    <div class="overlay" onclick="this.style.display='none';document.querySelector('.contact-modal').style.display='none';"></div>
+    <div class="contact-modal">
+        <button class="close" onclick="document.querySelector('.overlay').style.display='none';document.querySelector('.contact-modal').style.display='none';">X</button>
+        <h2>Contact Me</h2>
+        <p><strong>📧 Email:</strong> cangirgin@gmail.com</p>
+        <p><strong>🌍 Location:</strong> Izmir, Turkey</p>
+        <p><strong>📄 Summary:</strong><br>This contact section is for reaching out about collaborations, engineering projects, or general inquiries. Please use the email above and I’ll get back to you as soon as possible.</p>
+    </div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -181,6 +194,5 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
 </body>
 </html>
