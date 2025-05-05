@@ -20,44 +20,11 @@
             z-index: 9999;
             font-weight: bold;
         }
-
-        .contact-modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
-            z-index: 10000;
-            max-width: 90%;
-            width: 400px;
+        .skills {
+            margin-top: 1em;
         }
-
-        .contact-modal h2 {
-            margin-top: 0;
-        }
-
-        .contact-modal button.close {
-            background: #ccc;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            float: right;
-            cursor: pointer;
-        }
-
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 9998;
+        .skills li {
+            margin-bottom: 6px;
         }
     </style>
 </head>
@@ -71,7 +38,9 @@
             <a href="#home" class="icon solid fa-home"><span>Home</span></a>
             <a href="#about" class="icon solid fa-user"><span>About Me</span></a>
             <a href="#education" class="icon solid fa-graduation-cap"><span>Education</span></a>
+            <a href="#experience" class="icon solid fa-briefcase"><span>Experience</span></a>
             <a href="#projects" class="icon solid fa-folder-open"><span>Projects</span></a>
+            <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
         </nav>
 
         <!-- Main -->
@@ -95,11 +64,17 @@
                     <h2>About Me</h2>
                 </header>
                 <p>
-                    I am a 4th-year Mechanical Engineering student at Yaşar University.
-                    I am passionate about design and innovation, and I constantly strive to improve myself.
-                    I closely follow technological developments and focus on creating sustainable and efficient solutions.
-                    I am particularly interested in the defense industry and the automotive sector.
+                    I am a 4th-year Mechanical Engineering student at Yaşar University. I am passionate about design and innovation, and I constantly strive to improve myself. I closely follow technological developments and focus on creating sustainable and efficient solutions. I am particularly interested in the defense industry and the automotive sector.
                 </p>
+                <h3>Skills</h3>
+                <ul class="skills">
+                    <li>AutoCAD: ★★★★★</li>
+                    <li>Fusion 360: ★★★★★</li>
+                    <li>SolidWorks: ★★★★☆</li>
+                    <li>Python: ★★★☆☆</li>
+                    <li>EES: ★★★☆☆</li>
+                    <li>Microsoft Office: ★★★★★</li>
+                </ul>
                 <img src="images/about-final.png" alt="About Image" style="max-width:100%; border-radius: 10px;">
             </article>
 
@@ -112,6 +87,22 @@
                     <li><strong>High School:</strong> Özel Türk Koleji (2018 – 2021)</li>
                     <li><strong>University:</strong> Yaşar University, Mechanical Engineering Department (2021 – 2025)</li>
                 </ul>
+            </article>
+
+            <!-- Experience -->
+            <article id="experience" class="panel">
+                <header>
+                    <h2>Experience</h2>
+                </header>
+                <div class="row">
+                    <div class="col-6 col-12-medium">
+                        <h3>Maxion Jantaş – Production Intern (Aug 2024 – Sep 2024)</h3>
+                        <p>During my internship at Maxion Jantaş, I actively took part in the wheel manufacturing processes within the production department. I learned about lean manufacturing principles, quality control systems, and participated in hands-on operations using CNC machines and SAP-based inventory tracking. This experience deepened my understanding of mass production environments and industrial workflows.</p>
+                    </div>
+                    <div class="col-6 col-12-medium">
+                        <img src="images/maxion-logo.png" alt="Maxion Jantaş Logo" style="max-width:100%; border-radius: 10px;">
+                    </div>
+                </div>
             </article>
 
             <!-- Projects -->
@@ -161,6 +152,14 @@
                 </div>
             </article>
 
+            <!-- Contact -->
+            <article id="contact" class="panel">
+                <header>
+                    <h2>Contact Me</h2>
+                </header>
+                <p>If you would like to get in touch for collaboration, internship opportunities, or just to say hi, feel free to email me directly.</p>
+                <p><strong>Email:</strong> cangirgin@gmail.com</p>
+            </article>
         </div>
 
         <!-- Footer -->
@@ -171,21 +170,6 @@
             </ul>
         </div>
 
-    </div>
-
-    <!-- Floating Contact Button -->
-    <div id="floatingContact" onclick="document.querySelector('.overlay').style.display='block';document.querySelector('.contact-modal').style.display='block';">
-        Contact
-    </div>
-
-    <!-- Overlay & Modal -->
-    <div class="overlay" onclick="this.style.display='none';document.querySelector('.contact-modal').style.display='none';"></div>
-    <div class="contact-modal">
-        <button class="close" onclick="document.querySelector('.overlay').style.display='none';document.querySelector('.contact-modal').style.display='none';">X</button>
-        <h2>Contact Me</h2>
-        <p><strong>📧 Email:</strong> cangirgin@gmail.com</p>
-        <p><strong>🌍 Location:</strong> Izmir, Turkey</p>
-        <p><strong>📄 Summary:</strong><br>This contact section is for reaching out about collaborations, engineering projects, or general inquiries. Please use the email above and I’ll get back to you as soon as possible.</p>
     </div>
 
     <!-- Scripts -->
