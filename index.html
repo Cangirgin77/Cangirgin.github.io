@@ -1,228 +1,166 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Can Girgin Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
-        .skills li {
-            margin-bottom: 6px;
-        }
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .col-6 {
-            flex: 1 1 45%;
-        }
-        .contact-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: space-around;
-            margin-top: 2em;
-        }
-        .contact-item {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            flex: 1 1 200px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .contact-item i {
-            font-size: 32px;
-            color: #4a90e2;
-        }
-        .contact-item h4 {
-            margin: 10px 0 5px;
-        }
-        .contact-item p {
-            margin: 0;
-        }
-        .cv-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4a90e2;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can Girgin Portfolio</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 </head>
 <body class="is-preload">
+  <div id="wrapper">
 
-    <div id="wrapper">
+    <!-- Navigation -->
+    <nav id="nav">
+      <a href="#home" class="icon solid fa-home"><span>Home</span></a>
+      <a href="#about" class="icon solid fa-user"><span>About Me</span></a>
+      <a href="#education" class="icon solid fa-graduation-cap"><span>Education</span></a>
+      <a href="#experience" class="icon solid fa-briefcase"><span>Experience</span></a>
+      <a href="#projects" class="icon solid fa-folder"><span>Projects</span></a>
+      <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+    </nav>
 
-        <nav id="nav">
-            <a href="#home" class="icon solid fa-home"><span>Home</span></a>
-            <a href="#about" class="icon solid fa-user"><span>About Me</span></a>
-            <a href="#education" class="icon solid fa-graduation-cap"><span>Education</span></a>
-            <a href="#experience" class="icon solid fa-briefcase"><span>Experience</span></a>
-            <a href="#projects" class="icon solid fa-folder-open"><span>Projects</span></a>
-            <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-        </nav>
+    <div id="main">
 
-        <div id="main">
+      <!-- Home -->
+      <article id="home" class="panel intro">
+        <header>
+          <h1>Can Girgin</h1>
+          <p>Mechanical Engineering Student</p>
+          <p>Date of Birth: 24-03-2003</p>
+        </header>
+        <a href="#about" class="jumplink pic">
+          <span class="arrow icon solid fa-chevron-right"><span>About Me</span></span>
+          <img src="images/me.jpg" alt="Can Girgin">
+        </a>
+        <p><a href="assets/CV_CanGirgin.pdf" class="button" download>Explore CV (Curriculum Vitae)</a></p>
+      </article>
 
-            <article id="home" class="panel intro">
-                <header>
-                    <h1>Can Girgin</h1>
-                    <p>Mechanical Engineering Student<br>
-                    <strong>Date of Birth:</strong> 24/03/2003</p>
-                    <a href="assets/CV_CanGirgin.pdf" class="cv-button" download>CV (Curriculum Vitae) İncele</a>
-                </header>
-                <a href="#about" class="jumplink pic">
-                    <span class="arrow icon solid fa-chevron-right"><span>About Me</span></span>
-                    <img src="images/profile-right.png" alt="Profile Picture" />
-                </a>
-            </article>
+      <!-- About Me -->
+      <article id="about" class="panel">
+        <header>
+          <h2>About Me</h2>
+        </header>
+        <p>I am a senior Mechanical Engineering student at Yaşar University. I have a strong passion for the defense and automotive industries. I am skilled in technical design, simulation, and system optimization.</p>
+        <h3>Skills</h3>
+        <ul>
+          <li>AutoCAD: ★★★★☆</li>
+          <li>Fusion 360: ★★★★★</li>
+          <li>SolidWorks: ★★★★☆</li>
+          <li>Python: ★★★☆☆</li>
+          <li>EES: ★★★☆☆</li>
+          <li>MATLAB: ★★★☆☆</li>
+          <li>Microsoft Office: ★★★★★</li>
+        </ul>
+      </article>
 
-            <article id="about" class="panel">
-                <header>
-                    <h2>About Me</h2>
-                </header>
-                <p>I am a 4th-year Mechanical Engineering student at Yaşar University. I am passionate about design and innovation, and I constantly strive to improve myself. I closely follow technological developments and focus on creating sustainable and efficient solutions. I am particularly interested in the defense industry and the automotive sector.</p>
-                <h3>Skills</h3>
-                <ul class="skills">
-                    <li>AutoCAD: ★★★★★</li>
-                    <li>Fusion 360: ★★★★★</li>
-                    <li>SolidWorks: ★★★★☆</li>
-                    <li>Python: ★★★☆☆</li>
-                    <li>MATLAB: ★★★☆☆</li>
-                    <li>EES: ★★★☆☆</li>
-                    <li>Microsoft Office: ★★★★★</li>
-                </ul>
-                <img src="images/about-final.png" alt="About Image" style="max-width:100%; border-radius: 10px;">
-            </article>
+      <!-- Education -->
+      <article id="education" class="panel">
+        <header>
+          <h2>Education</h2>
+        </header>
+        <h3>Bachelor of Science in Mechanical Engineering</h3>
+        <p><em>Yaşar University (2021–2025)</em></p>
+        <ul>
+          <li>Relevant Coursework: Thermodynamics, Fluid Mechanics, Machine Design, Heat Transfer</li>
+          <li>Explored simulation tools and sustainable engineering</li>
+        </ul>
 
-            <article id="education" class="panel">
-                <header>
-                    <h2>Education</h2>
-                </header>
-                <div>
-                    <h3>Bachelor of Science in Mechanical Engineering (2021 – 2025)</h3>
-                    <i>Yaşar University – İzmir</i>
-                    <ul>
-                        <li>Relevant Coursework: Thermodynamics, Fluid Mechanics, Machine Design, Heat Transfer</li>
-                        <li>Explored opportunities to work with simulation tools, collaborative engineering projects, and sustainable design.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>High School Diploma (2018 – 2021)</h3>
-                    <i>İzmir Özel Türk Koleji</i>
-                    <ul>
-                        <li>Focused on Science and Mathematics.</li>
-                        <li>Developed a strong foundation in problem solving, logic, and analytical thinking, preparing me for engineering education.</li>
-                    </ul>
-                </div>
-            </article>
+        <h3>High School Diploma</h3>
+        <p><em>Özel Türk Koleji (2018–2021)</em></p>
+        <ul>
+          <li>Focus on Science and Mathematics</li>
+          <li>Strong foundation in logic, problem solving, and analytical thinking</li>
+        </ul>
+      </article>
 
-            <article id="experience" class="panel">
-                <header>
-                    <h2>Experience</h2>
-                </header>
-                <div class="row">
-                    <div class="col-6">
-                        <h3>Maxion Jantaş – Production Intern (Aug 2024 – Sep 2024)</h3>
-                        <p>During my internship at Maxion Jantaş, I actively took part in the wheel manufacturing processes within the production department. I learned about lean manufacturing principles, quality control systems, and participated in hands-on operations using CNC machines and SAP-based inventory tracking. This experience deepened my understanding of mass production environments and industrial workflows.</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="images/maxion-logo.png" alt="Maxion Jantaş Logo" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
-            </article>
-
-            <article id="projects" class="panel">
-                <header>
-                    <h2>Projects</h2>
-                </header>
-                <div class="row">
-                    <div class="col-6">
-                        <h3>Multigeneration Geothermal Power Plant</h3>
-                        <p>This senior design project focuses on developing a multigeneration system that uses geothermal energy to simultaneously produce electricity, hydrogen, and freshwater. The system integrates Rankine Cycle, PEM electrolyzer, and multistage desalination to demonstrate sustainable and efficient energy generation.</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="images/project1_geothermal.png" alt="Geothermal Project Image" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <h3>ANAFARTA KTR 2025 – Autonomous Combat UAV</h3>
-                        <p>Developed for the TUBITAK 2025 competition, ANAFARTA is a fully autonomous UAV optimized for surveillance and combat missions. It includes real-time image processing, target tracking, aerodynamic optimization, and energy-efficient operation strategies.</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="images/project2_anafarta.png" alt="UAV Project Image" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <h3>Renewable Energy + Hydrogen Storage</h3>
-                        <p>This term project proposes a hybrid renewable energy system integrating solar and wind with hydrogen storage. The system ensures stable energy supply for university campuses and evaluates technical and economic feasibility using demand models and ROI/LCOE analysis.</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="images/project3_h2storage.png" alt="Hydrogen Storage Project Image" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <h3>Autonomous Rudder Steering Systems for Boats <span style="color:gray;">(Ongoing)</span></h3>
-                        <p>This project focuses on developing an autonomous rudder control system for boats to improve stability and route precision. It is currently under development and will include embedded feedback mechanisms and control algorithms.</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="images/project4_rudder.png" alt="Rudder System Image" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
-            </article>
-
-            <article id="contact" class="panel">
-                <header>
-                    <h2>Contact</h2>
-                </header>
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <i class="icon solid fa-envelope"></i>
-                        <h4>Email</h4>
-                        <p>cangirgin@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="icon solid fa-phone"></i>
-                        <h4>Phone</h4>
-                        <p>+90 537 861 0414</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="icon solid fa-map-marker-alt"></i>
-                        <h4>Location</h4>
-                        <p>Balçova, İzmir</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="icon brands fa-linkedin"></i>
-                        <h4>LinkedIn</h4>
-                        <p><a href="https://www.linkedin.com/in/can-girgin-01a2b61b1/" target="_blank">can-girgin-01a2b61b1</a></p>
-                    </div>
-                </div>
-            </article>
-
+      <!-- Experience -->
+      <article id="experience" class="panel">
+        <header>
+          <h2>Experience</h2>
+        </header>
+        <div class="row">
+          <div class="col-6">
+            <h3>Maxion Jantaş – Production Intern (Aug 2024 – Sep 2024)</h3>
+            <p>As a production intern, I learned about automotive manufacturing processes, quality control, lean manufacturing principles, and production line optimization. I actively participated in floor observations and team discussions, contributing ideas to efficiency improvement projects.</p>
+          </div>
+          <div class="col-6">
+            <img src="images/maxion-logo.png.PNG" alt="Maxion Jantaş Logo" style="max-width:100%; border-radius: 10px;">
+          </div>
         </div>
+      </article>
 
-        <div id="footer">
-            <ul class="copyright">
-                <li>&copy; Can Girgin</li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-            </ul>
+      <!-- Projects -->
+      <article id="projects" class="panel">
+        <header>
+          <h2>Projects</h2>
+        </header>
+        <div class="row">
+          <div class="col-6">
+            <h3>Multigeneration Geothermal Power Plant</h3>
+            <p>This senior design project involves generating electricity, hydrogen, and freshwater using geothermal energy integrated with advanced thermodynamic cycles.</p>
+          </div>
+          <div class="col-6">
+            <img src="images/multigen.PNG.PNG" alt="Multigeneration Geothermal Plant" style="max-width:100%; border-radius: 10px;">
+          </div>
+
+          <div class="col-6">
+            <h3>ANAFARTA IHA Project</h3>
+            <p>A TUBITAK 2025 competition project focused on developing an autonomous UAV platform with combat capabilities and real-time image processing.</p>
+          </div>
+          <div class="col-6">
+            <img src="images/iha.png.png" alt="ANAFARTA IHA" style="max-width:100%; border-radius: 10px;">
+          </div>
+
+          <div class="col-6">
+            <h3>Autonomous Rudder Steering Systems for Boats (Ongoing)</h3>
+            <p>This project focuses on developing an autonomous rudder control system for boats to improve stability and route precision. It is currently under development and will include embedded feedback mechanisms and control algorithms.</p>
+          </div>
+          <div class="col-6">
+            <img src="images/hidrojen.png.PNG" alt="Autonomous Rudder Project" style="max-width:100%; border-radius: 10px;">
+          </div>
         </div>
+      </article>
 
+      <!-- Contact -->
+      <article id="contact" class="panel">
+        <header>
+          <h2>Contact</h2>
+        </header>
+        <div class="row">
+          <div class="col-6 col-12-medium">
+            <h3>Email</h3>
+            <p>cangirgin@gmail.com</p>
+          </div>
+          <div class="col-6 col-12-medium">
+            <h3>Phone</h3>
+            <p>+90 537 861 0414</p>
+          </div>
+          <div class="col-6 col-12-medium">
+            <h3>Location</h3>
+            <p>Balçova, İzmir</p>
+          </div>
+          <div class="col-6 col-12-medium">
+            <h3>LinkedIn</h3>
+            <p><a href="https://www.linkedin.com/in/can-girgin-01a2b61b1/" target="_blank">linkedin.com/in/can-girgin</a></p>
+          </div>
+        </div>
+      </article>
     </div>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Footer -->
+    <div id="footer">
+      <ul class="copyright">
+        <li>&copy; Can Girgin</li><li>Design: HTML5 UP</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
