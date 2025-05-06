@@ -1,81 +1,13 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html>
 <head>
     <title>Can Girgin Portfolio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
-        .lang-toggle {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background-color: #2a4e8a;
-            color: white;
-            border-radius: 5px;
-            padding: 5px 10px;
-            font-size: 14px;
-            z-index: 1000;
-        }
-        .lang-toggle button {
-            background: none;
-            border: none;
-            color: white;
-            font-weight: bold;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-        .lang-toggle button.active {
-            background-color: #5fa9f1;
-            border-radius: 4px;
-            padding: 2px 8px;
-        }
-        [lang="tr"] { display: none; }
-        .lang-tr [lang="tr"] { display: block; }
-        .lang-tr [lang="en"] { display: none; }
-        .cv-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4a90e2;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .contact-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: space-around;
-            margin-top: 2em;
-        }
-        .contact-item {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            flex: 1 1 200px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .contact-item i {
-            font-size: 32px;
-            color: #4a90e2;
-        }
-        .contact-item h4 {
-            margin: 10px 0 5px;
-        }
-        .contact-item p {
-            margin: 0;
-        }
-    </style>
 </head>
-<body class="is-preload lang-en">
-    <div class="lang-toggle">
-        <button id="btn-en" class="active">EN</button> |
-        <button id="btn-tr">TR</button>
-    </div>
+<body class="is-preload">
 
     <div id="wrapper">
         <nav id="nav">
@@ -91,23 +23,15 @@
             <article id="home" class="panel intro">
                 <header>
                     <h1>Can Girgin</h1>
-                    <p><span lang="en">Mechanical Engineering Student<br>Date of Birth: 24/03/2003</span><span lang="tr">Makine Mühendisliği Öğrencisi<br>Doğum Tarihi: 24/03/2003</span></p>
-                    <a href="assets/CV_CanGirgin.pdf" class="cv-button" download>
-                        <span lang="en">View CV (Curriculum Vitae)</span>
-                        <span lang="tr">CV'yi (Özgeçmiş) Görüntüle</span>
-                    </a>
+                    <p>Mechanical Engineering Student<br>Date of Birth: 24/03/2003</p>
+                    <a href="assets/CV_CanGirgin.pdf" class="cv-button" download>View CV (Curriculum Vitae)</a>
                 </header>
             </article>
 
             <article id="about" class="panel">
-                <header>
-                    <h2><span lang="en">About Me</span><span lang="tr">Hakkımda</span></h2>
-                </header>
-                <p>
-                    <span lang="en">I'm a 4th year Mechanical Engineering student at Yaşar University. I’m particularly interested in the defense industry and automotive sector.</span>
-                    <span lang="tr">Yaşar Üniversitesi'nde 4. sınıf Makine Mühendisliği öğrencisiyim. Özellikle savunma sanayii ve otomotiv sektörüne ilgi duyuyorum.</span>
-                </p>
-                <h3><span lang="en">Skills</span><span lang="tr">Yetenekler</span></h3>
+                <header><h2>About Me</h2></header>
+                <p>I am a 4th year Mechanical Engineering student at Yaşar University. I am particularly interested in the defense industry and the automotive sector.</p>
+                <h3>Skills</h3>
                 <ul>
                     <li>AutoCAD: ★★★★☆</li>
                     <li>Fusion 360: ★★★★★</li>
@@ -120,30 +44,27 @@
             </article>
 
             <article id="education" class="panel">
-                <header><h2><span lang="en">Education</span><span lang="tr">Eğitim</span></h2></header>
+                <header><h2>Education</h2></header>
                 <div>
                     <h3>Yaşar University – Mechanical Engineering (2021–2025)</h3>
-                    <p><span lang="en">Explored opportunities to work with simulation tools, collaborative engineering projects, and sustainable design.</span>
-                    <span lang="tr">Simülasyon araçlarıyla çalışma, mühendislik projelerinde iş birliği ve sürdürülebilir tasarım konularında kendimi geliştirme fırsatı buldum.</span></p>
+                    <p>Explored opportunities to work with simulation tools, collaborative engineering projects, and sustainable design.</p>
                 </div>
                 <div>
                     <h3>İzmir Özel Türk Koleji – High School (2018–2021)</h3>
-                    <p><span lang="en">Developed foundation in science and mathematics, essential for engineering education.</span>
-                    <span lang="tr">Mühendislik eğitimi için gerekli fen ve matematik temellerini oluşturdum.</span></p>
+                    <p>Developed foundation in science and mathematics, essential for engineering education.</p>
                 </div>
             </article>
 
             <article id="experience" class="panel">
-                <header><h2><span lang="en">Experience</span><span lang="tr">Tecrübeler</span></h2></header>
+                <header><h2>Experience</h2></header>
                 <div>
                     <h3>Maxion Jantaş – Production Intern (Aug 2024 – Sep 2024)</h3>
-                    <p><span lang="en">Took part in production line operations, learned lean manufacturing, CNC, SAP systems, and quality control practices.</span>
-                    <span lang="tr">Üretim hattı süreçlerinde görev aldım, yalın üretim, CNC, SAP sistemleri ve kalite kontrol uygulamaları hakkında deneyim kazandım.</span></p>
+                    <p>Took part in production line operations, learned lean manufacturing, CNC, SAP systems, and quality control practices.</p>
                 </div>
             </article>
 
             <article id="projects" class="panel">
-                <header><h2><span lang="en">Projects</span><span lang="tr">Projeler</span></h2></header>
+                <header><h2>Projects</h2></header>
                 <section>
                     <h3>Multigeneration Geothermal Power Plant</h3>
                     <img src="images/project1.png" alt="Project 1 Image" style="max-width:100%">
@@ -164,9 +85,7 @@
             </article>
 
             <article id="contact" class="panel">
-                <header>
-                    <h2><span lang="en">Contact</span><span lang="tr">İletişim</span></h2>
-                </header>
+                <header><h2>Contact</h2></header>
                 <div class="contact-grid">
                     <div class="contact-item">
                         <i class="icon solid fa-envelope"></i>
@@ -204,24 +123,5 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        const btnEn = document.getElementById('btn-en');
-        const btnTr = document.getElementById('btn-tr');
-        const body = document.body;
-
-        btnEn.addEventListener('click', () => {
-            body.classList.remove('lang-tr');
-            body.classList.add('lang-en');
-            btnEn.classList.add('active');
-            btnTr.classList.remove('active');
-        });
-
-        btnTr.addEventListener('click', () => {
-            body.classList.remove('lang-en');
-            body.classList.add('lang-tr');
-            btnTr.classList.add('active');
-            btnEn.classList.remove('active');
-        });
-    </script>
 </body>
 </html>
