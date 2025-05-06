@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <title>Can Girgin Portfolio</title>
     <meta charset="utf-8" />
@@ -7,16 +7,42 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        .skills li {
-            margin-bottom: 6px;
+        .lang-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #2a4e8a;
+            color: white;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 14px;
+            z-index: 1000;
         }
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+        .lang-toggle button {
+            background: none;
+            border: none;
+            color: white;
+            font-weight: bold;
+            margin: 0 5px;
+            cursor: pointer;
         }
-        .col-6 {
-            flex: 1 1 45%;
+        .lang-toggle button.active {
+            background-color: #5fa9f1;
+            border-radius: 4px;
+            padding: 2px 8px;
+        }
+        [lang="tr"] { display: none; }
+        .lang-tr [lang="tr"] { display: block; }
+        .lang-tr [lang="en"] { display: none; }
+        .cv-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
         }
         .contact-grid {
             display: flex;
@@ -43,25 +69,18 @@
         .contact-item p {
             margin: 0;
         }
-        .cv-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4a90e2;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
     </style>
 </head>
-<body class="is-preload">
+<body class="is-preload lang-en">
+    <div class="lang-toggle">
+        <button id="btn-en" class="active">EN</button> |
+        <button id="btn-tr">TR</button>
+    </div>
+
     <div id="wrapper">
         <nav id="nav">
             <a href="#home" class="icon solid fa-home"><span>Home</span></a>
             <a href="#about" class="icon solid fa-user"><span>About Me</span></a>
-            <a href="#education" class="icon solid fa-graduation-cap"><span>Education</span></a>
-            <a href="#experience" class="icon solid fa-briefcase"><span>Experience</span></a>
             <a href="#projects" class="icon solid fa-folder-open"><span>Projects</span></a>
             <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
         </nav>
@@ -70,107 +89,61 @@
             <article id="home" class="panel intro">
                 <header>
                     <h1>Can Girgin</h1>
-                    <p>Mechanical Engineering Student<br>
-                    <strong>Date of Birth:</strong> 24/03/2003</p>
-                    <a href="assets/CV_CanGirgin.pdf" class="cv-button" download>View CV (Curriculum Vitae)</a>
+                    <p><span lang="en">Mechanical Engineering Student<br>Date of Birth: 24/03/2003</span><span lang="tr">Makine Mühendisliği Öğrencisi<br>Doğum Tarihi: 24/03/2003</span></p>
+                    <a href="assets/CV_CanGirgin.pdf" class="cv-button" download>
+                        <span lang="en">View CV (Curriculum Vitae)</span>
+                        <span lang="tr">CV'yi (Özgeçmiş) Görüntüle</span>
+                    </a>
                 </header>
-                <a href="#about" class="jumplink pic">
-                    <span class="arrow icon solid fa-chevron-right"><span>About Me</span></span>
-                    <img src="images/profile-right.png" alt="Profile Picture" />
-                </a>
             </article>
 
             <article id="about" class="panel">
-                <header><h2>About Me</h2></header>
-                <p>I am a 4th-year Mechanical Engineering student at Yaşar University. I am passionate about design and innovation, and I constantly strive to improve myself. I closely follow technological developments and focus on creating sustainable and efficient solutions. I am particularly interested in the defense industry and the automotive sector.</p>
-                <h3>Skills</h3>
-                <ul class="skills">
-                    <li>AutoCAD: ★★★★★</li>
+                <header>
+                    <h2><span lang="en">About Me</span><span lang="tr">Hakkımda</span></h2>
+                </header>
+                <p>
+                    <span lang="en">I'm a 4th year Mechanical Engineering student at Yaşar University. I’m particularly interested in the defense industry and automotive sector.</span>
+                    <span lang="tr">Yaşar Üniversitesi'nde 4. sınıf Makine Mühendisliği öğrencisiyim. Özellikle savunma sanayii ve otomotiv sektörüne ilgi duyuyorum.</span>
+                </p>
+                <h3><span lang="en">Skills</span><span lang="tr">Yetenekler</span></h3>
+                <ul>
+                    <li>AutoCAD: ★★★★☆</li>
                     <li>Fusion 360: ★★★★★</li>
                     <li>SolidWorks: ★★★★☆</li>
                     <li>Python: ★★★☆☆</li>
-                    <li>MATLAB: ★★★☆☆</li>
                     <li>EES: ★★★☆☆</li>
+                    <li>MATLAB: ★★★☆☆</li>
                     <li>Microsoft Office: ★★★★★</li>
                 </ul>
-                <img src="images/about-final.png" alt="About Image" style="max-width:100%; border-radius: 10px;">
-            </article>
-
-            <article id="education" class="panel">
-                <header><h2>Education</h2></header>
-                <div>
-                    <h3>Bachelor of Science in Mechanical Engineering (2021 – 2025)</h3>
-                    <i>Yaşar University – İzmir</i>
-                    <ul>
-                        <li>Relevant Coursework: Thermodynamics, Fluid Mechanics, Machine Design, Heat Transfer</li>
-                        <li>Explored opportunities to work with simulation tools, collaborative engineering projects, and sustainable design.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>High School Diploma (2018 – 2021)</h3>
-                    <i>İzmir Özel Türk Koleji</i>
-                    <ul>
-                        <li>Focused on Science and Mathematics.</li>
-                        <li>Developed a strong foundation in problem solving, logic, and analytical thinking, preparing me for engineering education.</li>
-                    </ul>
-                </div>
-            </article>
-
-            <article id="experience" class="panel">
-                <header><h2>Experience</h2></header>
-                <div class="row">
-                    <div class="col-6">
-                        <h3>Maxion Jantaş – Production Intern (Aug 2024 – Sep 2024)</h3>
-                        <p>During my internship at Maxion Jantaş, I actively took part in the wheel manufacturing processes within the production department. I learned about lean manufacturing principles, quality control systems, and participated in hands-on operations using CNC machines and SAP-based inventory tracking. This experience deepened my understanding of mass production environments and industrial workflows.</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="images/maxion-logo.png" alt="Maxion Jantaş Logo" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
             </article>
 
             <article id="projects" class="panel">
-                <header><h2>Projects</h2></header>
-                <div class="row">
-                    <div class="col-6">
-                        <h3>Multigeneration Geothermal Power Plant</h3>
-                        <p>Multigeneration system that uses geothermal energy to produce electricity, hydrogen, and freshwater. Uses Rankine Cycle, PEM electrolyzer, and multistage desalination.</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="images/project1_geothermal.png" alt="Geothermal Project" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <h3>ANAFARTA KTR 2025 – Autonomous Combat UAV</h3>
-                        <p>Autonomous UAV developed for TUBITAK 2025 competition with real-time image processing, target tracking, and aerodynamic optimization.</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="images/project2_anafarta.png" alt="UAV Project" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <h3>Renewable Energy + Hydrogen Storage</h3>
-                        <p>Hybrid renewable energy system integrating solar and wind with hydrogen storage. Includes ROI/LCOE analysis for campus-level energy management.</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="images/project3_h2storage.png" alt="Hydrogen Storage Project" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <h3>Autonomous Rudder Steering Systems for Boats <span style="color:gray;">(Ongoing)</span></h3>
-                        <p>System to improve marine navigation and steering using sensors and feedback loops. Includes prototype development and control design.</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="images/project4_rudder.png" alt="Rudder Project" style="max-width:100%; border-radius: 10px;">
-                    </div>
-                </div>
+                <header>
+                    <h2><span lang="en">Projects</span><span lang="tr">Projeler</span></h2>
+                </header>
+                <section>
+                    <h3>Multigeneration Geothermal Power Plant</h3>
+                    <img src="images/project1.png" alt="Project 1 Image" style="max-width:100%">
+                    <p>Electricity, hydrogen, and freshwater production using advanced thermodynamic cycles.</p>
+
+                    <h3>Denior Project</h3>
+                    <img src="images/project2.png" alt="Project 2 Image" style="max-width:100%">
+                    <p>Innovative senior project integrating multi-disciplinary engineering fields.</p>
+
+                    <h3>ANAFARTA IHA – Autonomous Combat UAV</h3>
+                    <img src="images/project3.png" alt="Project 3 Image" style="max-width:100%">
+                    <p>Design and development of an autonomous UAV for the TUBITAK 2025 competition.</p>
+
+                    <h3>Autonomous Rudder Steering Systems for Boats</h3>
+                    <img src="images/project4.png" alt="Rudder System Image" style="max-width:100%">
+                    <p>Designing a smart rudder control system for autonomous navigation on boats.</p>
+                </section>
             </article>
 
             <article id="contact" class="panel">
-                <header><h2>Contact</h2></header>
+                <header>
+                    <h2><span lang="en">Contact</span><span lang="tr">İletişim</span></h2>
+                </header>
                 <div class="contact-grid">
                     <div class="contact-item">
                         <i class="icon solid fa-envelope"></i>
@@ -180,7 +153,7 @@
                     <div class="contact-item">
                         <i class="icon solid fa-phone"></i>
                         <h4>Phone</h4>
-                        <p>+90 537 861 0414</p>
+                        <p>+90 537 861 04 14</p>
                     </div>
                     <div class="contact-item">
                         <i class="icon solid fa-map-marker-alt"></i>
@@ -190,7 +163,7 @@
                     <div class="contact-item">
                         <i class="icon brands fa-linkedin"></i>
                         <h4>LinkedIn</h4>
-                        <p><a href="https://www.linkedin.com/in/can-girgin-01a2b61b1/" target="_blank">can-girgin-01a2b61b1</a></p>
+                        <p><a href="https://www.linkedin.com/in/can-girgin-01a2b61b1/">linkedin.com/in/can-girgin-01a2b61b1</a></p>
                     </div>
                 </div>
             </article>
@@ -209,5 +182,24 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        const btnEn = document.getElementById('btn-en');
+        const btnTr = document.getElementById('btn-tr');
+        const body = document.body;
+
+        btnEn.addEventListener('click', () => {
+            body.classList.remove('lang-tr');
+            body.classList.add('lang-en');
+            btnEn.classList.add('active');
+            btnTr.classList.remove('active');
+        });
+
+        btnTr.addEventListener('click', () => {
+            body.classList.remove('lang-en');
+            body.classList.add('lang-tr');
+            btnTr.classList.add('active');
+            btnEn.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
